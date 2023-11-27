@@ -79,6 +79,8 @@ keyboard. The brightness cycle will adjust the brightness in three steps (Off,
 Dim, Bright). When mapped to `Fn-SPACE`, it functions much like the brightness
 control on some Lenovo laptops.
 
+[q3_br_cycle.webm](https://github.com/desaster/keyboard-hacks/assets/631441/1b234d95-7dbd-4559-a4f1-506e2b08e9e8)
+
 ### Countdown timer
 
 The RGB functionality on the keyboard is pretty, but quite useless by default.
@@ -97,6 +99,8 @@ When the countdown is active, a number key corresponding to the minutes left
 in the timer will blink. When the timer reaches zero, a flashy RGB effect is
 activated for a short time.
 
+[q3_countdown_timer.webm](https://github.com/desaster/keyboard-hacks/assets/631441/04391aad-9f8f-408c-9988-60910197b702)
+
 ### Layer spell out
 
 With the extra layers being just layers from 1 through 4, it can be hard to
@@ -108,6 +112,8 @@ then be lit on the keyboard when the layer is toggled.
 For example, if the auxiliary layer 1 is for enabling some extra media keys,
 the layer could be called "**media**". When the layer is toggled on, the keys
 `M`, `E`, `D`, `I` and `A` will be shortly lit in sequence.
+
+[q3_layer_spellout.webm](https://github.com/desaster/keyboard-hacks/assets/631441/d961ddd0-3723-4429-90c9-e8e89675b8eb)
 
 Unfortunately the layer names have to be hard-coded in the keymap source code.
 
