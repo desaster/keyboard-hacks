@@ -133,7 +133,8 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max)
     countdown_timer_set_colors(led_min, led_max);
     layer_spellout_set_colors(led_min, led_max);
 
-    return false;
+    // return true so the _kb callback will check capslock
+    return true;
 }
 
 layer_state_t layer_state_set_user(layer_state_t state)
