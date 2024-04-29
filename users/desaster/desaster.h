@@ -9,6 +9,7 @@
 #include "brightness_cycle.h"
 #include "countdown_timer.h"
 #include "layer_spellout.h"
+#include "anti_idle.h"
 
 #if DESASTER_DEBUG == 1
 #include "print.h"

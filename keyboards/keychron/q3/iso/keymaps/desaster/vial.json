@@ -18,7 +18,8 @@
     {"name": "Cortana", "title": "Cortana in windows", "shortName": "Cortana"},
     {"name": "Brightness Cycle", "title": "Cycle brightness settings", "shortName": "Brightness Cycle"},
     {"name": "Timer Add", "title": "Add a minute to timer", "shortName": "Timer Add"},
-    {"name": "Timer Reset", "title": "Reset timer", "shortName": "Timer Reset"}
+    {"name": "Timer Reset", "title": "Reset timer", "shortName": "Timer Reset"},
+    {"name": "Anti Idle", "title": "Toggle Anti Idle", "shortName": "Anti Idle"}
   ],
   "layouts": {
     "keymap":[

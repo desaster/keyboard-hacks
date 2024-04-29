@@ -152,3 +152,11 @@ const char *layer_indicators[] = {
 A future improvement might be to allow entering layer names using the keyboard
 itself, and
 [storing them in eeprom](https://github.com/qmk/qmk_firmware/blob/master/docs/feature_eeprom.md#persistent-configuration-eeprom).
+
+### Anti idle
+
+A simple toggleable anti-idle feature that sends a shift keypress every 2-4
+minutes. Additionally blinks a key to indicate that the anti-idle is enabled.
+
+This feature adds a new action, "**Anti Idle**", which can be mapped to any
+key through Vial. The blinking key is still harcoded to `PgUp`, though.

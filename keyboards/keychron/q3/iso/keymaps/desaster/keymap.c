@@ -32,7 +32,8 @@ const char *layer_indicators[] = {
 enum keycodes_user {
     KC_BRCYCLE = KC_CORTANA + 1, // continue from keychron keycodes
     KC_TIMER_ADD,
-    KC_TIMER_RESET
+    KC_TIMER_RESET,
+    KC_ANTI_IDLE
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -95,6 +96,7 @@ void housekeeping_task_user(void)
     housekeeping_task_keychron();
     countdown_timer_update();
     layer_spellout_update();
+    anti_idle_update();
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
@@ -123,6 +125,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             }
 
             return countdown_timer_reset();
+
+        case KC_ANTI_IDLE:
+            if (!record->event.pressed) {
+                return false;
+            }
+
+            return anti_idle_toggle();
     }
 
     return true;
@@ -132,6 +141,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max)
 {
     countdown_timer_set_colors(led_min, led_max);
     layer_spellout_set_colors(led_min, led_max);
+    anti_idle_set_colors(led_min, led_max);
 
     // return true so the _kb callback will check capslock
     return true;

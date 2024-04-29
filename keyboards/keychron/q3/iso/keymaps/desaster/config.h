@@ -46,6 +46,12 @@
 #define BRIGHTNESS_CYCLE_MID    0x40
 #define BRIGHTNESS_CYCLE_HIGH   0x80
 
+//
+// options for anti idle feature (users/desaster/anti_idle.c)
+//
+
+#define ANTI_IDLE_RGB RGB_GMK_CV
+
 // Disable some effects that I don't need. These are normally enabled in
 // keyboards/keychron/q3/config.h
 
