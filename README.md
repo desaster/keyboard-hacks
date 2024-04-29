@@ -25,9 +25,30 @@ the changes first.
 
 ### Building
 
-The included script `firmware/build-custom-firwmare.sh` should download
-qmk-vial and build a firmware image with no extra fuss. Just git and docker
-needed.
+This repository utilizes the QMK
+[userspace](https://github.com/qmk/qmk_userspace) functionality,
+which allows keeping custom keymaps outside the main qmk repository.
+
+To make installing really simple, the included Dockerfile will create a build
+environment containing the [qmk](https://github.com/qmk/qmk_cli) cli and [vial-qmk](https://github.com/vial-kb/vial-qmk).
+
+To build the custom docker image, run:
+
+```
+docker build -t qmk-vial-userspace-builder:latest .
+```
+
+To build the customized firmware, simply run:
+
+```sh
+docker run -it --rm -v $(pwd):/qmk-userspace qmk-vial-userspace-builder
+```
+
+Or alternatively specify the keyboard and keymap, also letting you see error messages:
+
+```sh
+docker run -it --rm -v $(pwd):/qmk-userspace qmk-vial-userspace-builder qmk compile -kb keychron/q3/iso -km desaster
+```
 
 ### Layers
 
